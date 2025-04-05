@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* @import "tailwindcss/themes"; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* @theme {
+  colors: {
+    "chestnut-rose":#d34848;
+  }
+} */
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply px-8 py-12 sm:px-16 sm:py-24;
+  }
+
+  .padding-x {
+    @apply px-8 sm:px-36;
+  }
+
+  .padding-y {
+    @apply py-12 sm:py-24;
+  }
+
+  .padding-l {
+    @apply pl-8 sm:pl-16;
+  }
+
+  .padding-r {
+    @apply pr-8 sm:pr-16;
+  }
+
+  .padding-t {
+    @apply pt-12 sm:pt-24;
+  }
+
+  .padding-b {
+    @apply pb-12 sm:pb-24;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+
+  .backgroundImageRed {
+    @apply bg-gradient-to-r from-gradient-very-light-red to-gradient-light-red bg-cover bg-center bg-no-repeat;
+  }
+  .nav::after {
+    @apply absolute -bottom-[1px] left-0 h-[3px] w-[0%] rounded-xl bg-white transition-all duration-300 content-[''];
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+  .backgroundImageBlue {
+    @apply bg-gradient-to-r from-gradient-very-dark-blue to-gradient-very-dark-desaturated-blue bg-cover bg-center bg-no-repeat;
+  }
+  .backgroundImageCircle {
+    @apply bg-[url('./assets/images/bgPatternCircles.svg')] bg-cover bg-[left_-7.5rem_top_-13rem] bg-no-repeat md:bg-[left_-0rem_top_-23rem] lg:bg-[left_-0rem_top_-39rem] xl:bg-[auto_300%] xl:bg-[left_-18.5rem_bottom_-9rem];
+  }
+}
